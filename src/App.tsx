@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-    const [count, setCount] = useState(0)
+
 
     interface item {
         id: number
@@ -162,7 +161,7 @@ function App() {
 
     const source = initState.map(item =>
         <img key={item.id}
-            onClick={event => handeInitlPut(item.id)}
+            onClick={() => handeInitlPut(item.id)}
             src={item.img}
 
             style={{
@@ -174,7 +173,7 @@ function App() {
 
     const dest = dirState.map(item =>
         <img key={item.id}
-            onClick={event => handelDestPut(item.id)}
+            onClick={() => handelDestPut(item.id)}
 
             src={item.img}
 
@@ -253,7 +252,7 @@ function App() {
                                 </div>
                                 <div className="slot itemSlot">
                                     <img key={boat.id}
-                                        onClick={event => handelremove(boat.item?.id)}
+                                        onClick={() => handelremove(boat.item?.id)}
 
                                         src={boat.item?.img}
 
