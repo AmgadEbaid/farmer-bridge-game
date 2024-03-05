@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-
 import './App.css'
 
 function App() {
@@ -31,13 +30,13 @@ function App() {
     const [dirState, setdirState] = useState<item[]>([])
     const [initState, setinitState] = useState<item[]>([{
         id: 1,
-        img: "public/fox-svgrepo-com.svg",
+        img: "fox-svgrepo-com.svg",
         side: false,
         name: "fox"
     }, {
         id: 2,
 
-        img: "public/goat-svgrepo-com.svg",
+        img: "goat-svgrepo-com.svg",
         side: false,
         name: "goat"
     }, {
@@ -49,12 +48,12 @@ function App() {
     }])
     const [boat, setBoat] = useState<boat>({
         id: 4,
-        item: undefined ,
+        item: undefined,
         boatside: false,
         hasItem: false
     })
 
-    const farmerUrl = "public/farmer.png"
+    const farmerUrl = "farmer.png"
 
     useEffect(() => {
         if (dirState.length == 3) {
@@ -99,15 +98,15 @@ function App() {
 
         if (id == undefined)
             return
-  
+
         let thisItem = boat.item as item
-      
+
         if (thisItem) {
             thisItem.side = boat.boatside;
         } if (boat.boatside == false) {
             setinitState(prevItem => {
                 return [...prevItem, thisItem];
-            }) ;
+            });
         } else if (boat.boatside == true) {
             setdirState(prevItem => {
                 return [...prevItem, thisItem];
@@ -185,7 +184,7 @@ function App() {
             }}
         />
     );
-    function playagain(){
+    function playagain() {
         setgame(gameState.play)
         setBoat({
             id: 4,
@@ -200,18 +199,18 @@ function App() {
             name: "fox"
         }, {
             id: 2,
-    
+
             img: "public/goat-svgrepo-com.svg",
             side: false,
             name: "goat"
         }, {
             id: 3,
-    
+
             img: "vegetables-salad-svgrepo-com.svg",
             side: false,
             name: "veg"
         }])
-      
+
         setdirState([])
     }
 
