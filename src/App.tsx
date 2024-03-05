@@ -194,13 +194,13 @@ function App() {
         })
         setinitState([{
             id: 1,
-            img: "public/fox-svgrepo-com.svg",
+            img: "fox-svgrepo-com.svg",
             side: false,
             name: "fox"
         }, {
             id: 2,
 
-            img: "public/goat-svgrepo-com.svg",
+            img: "goat-svgrepo-com.svg",
             side: false,
             name: "goat"
         }, {
