@@ -49,7 +49,7 @@ function App() {
     }])
     const [boat, setBoat] = useState<boat>({
         id: 4,
-        item: undefined,
+        item: undefined ,
         boatside: false,
         hasItem: false
     })
@@ -99,13 +99,15 @@ function App() {
 
         if (id == undefined)
             return
-        let thisItem = boat.item
+  
+        let thisItem = boat.item as item
+      
         if (thisItem) {
             thisItem.side = boat.boatside;
         } if (boat.boatside == false) {
             setinitState(prevItem => {
                 return [...prevItem, thisItem];
-            });
+            }) ;
         } else if (boat.boatside == true) {
             setdirState(prevItem => {
                 return [...prevItem, thisItem];

@@ -56,12 +56,13 @@ body{
   background-image: url( /public/boat.png);
   background-size: 100px;
   background-size: cover;
-
+  z-index: 2;
   
 }
 .slots{
   display: flex;
   flex-direction: row;
+  z-index: 1;
 
 }
 .go{
